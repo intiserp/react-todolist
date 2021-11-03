@@ -7,7 +7,7 @@ const TodoList = (props) => {
     <ul>
       {todos.map((todo) => (
         <li key={todo.id}>
-          {todo.value}
+          {todo.task}
           <button onClick={() => removeTodo(todo.id)}>X</button>
         </li>
       ))}
