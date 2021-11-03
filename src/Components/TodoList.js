@@ -1,14 +1,14 @@
 import React from "react";
 
 const TodoList = (props) => {
-  const { todos, removeTodo } = props;
+  const { todos, deleteTodo } = props;
 
   return (
     <ul>
-      {todos.map((todo) => (
-        <li key={todo.id}>
-          {todo.task}
-          <button onClick={() => removeTodo(todo.id)}>X</button>
+      {Object.keys(todos).map((id) => (
+        <li key={id}>
+          {todos[id].task}
+          <button onClick={() => deleteTodo(id)}>X</button>
         </li>
       ))}
     </ul>
